@@ -29,6 +29,14 @@ public class Solo {
             setEnxofre(9);
             setAluminio(0);  
         }
+        else if(valor_textura==2){
+            setFosforo(12);
+            setPotassio(0.25);
+            setCalcio(4);
+            setMagnesio(1);
+            setEnxofre(6);
+            setAluminio(0); 
+        }
         else{
             System.out.println("ERRO: Tipo de textura de solo");   
         }
