@@ -98,6 +98,6 @@ public class Solo {
     public void setHal(double hal) {
         this.hal = hal;
     }
-    
-   
+
+  
 }
