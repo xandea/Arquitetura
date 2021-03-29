@@ -49,15 +49,29 @@ public class SoloTest {
         assertEquals(9.0, s.getFosforo());
     }
     
-    /**
-     *
-     */
     @Test
     public void test2Valor_Solo() {
         Solo s = new Solo();
         s.Valor_Solo(2);
         assertEquals(12.0, s.getFosforo());
     }
+    
+    @Test
+    public void testMO(){
+        Solo s = new Solo();
+        s.setMateriaOrganica(30.7);
+        assertEquals(3.07,s.getMateriaOrganica());
+    }
+    
+    @Test
+    public void testCarbono(){
+        Solo s = new Solo();
+        s.setMateriaOrganica(30.7);
+        s.setCarbono(s.getMateriaOrganica());
+        assertEquals(17.848837209302324,s.getCarbono());
+
+    }
+    
 
     
 }

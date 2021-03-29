@@ -18,27 +18,31 @@ public class Solo {
     private double enxofre;
     private double aluminio;
     private double hal;
+    private double materiaOrganica;
+    private double carbono;
   
     public Solo Valor_Solo(int valor_textura){
         Solo s = new Solo();
-        if(valor_textura==1){
-            setFosforo(9.0);
-            setPotassio(0.35);
-            setCalcio(6);
-            setMagnesio(1.5);
-            setEnxofre(9);
-            setAluminio(0);  
-        }
-        else if(valor_textura==2){
-            setFosforo(12);
-            setPotassio(0.25);
-            setCalcio(4);
-            setMagnesio(1);
-            setEnxofre(6);
-            setAluminio(0); 
-        }
-        else{
-            System.out.println("ERRO: Tipo de textura de solo");   
+        switch (valor_textura) {
+            case 1:
+                setFosforo(9.0);
+                setPotassio(0.35);
+                setCalcio(6);
+                setMagnesio(1.5);
+                setEnxofre(9);
+                setAluminio(0);
+                break;
+            case 2:
+                setFosforo(12);
+                setPotassio(0.25);
+                setCalcio(4);
+                setMagnesio(1);
+                setEnxofre(6);
+                setAluminio(0);
+                break;
+            default:   
+                System.out.println("ERRO: Tipo de textura de solo");
+                break;
         }
         return s;
     }
@@ -99,5 +103,31 @@ public class Solo {
         this.hal = hal;
     }
 
+    void setMateriaOrganica(double materiaOrganica) {
+        if(materiaOrganica>0.01){
+            this.materiaOrganica = materiaOrganica/10;
+        }else{
+            this.materiaOrganica = 0;
+        }  
+    }
+
+    double getMateriaOrganica() {
+        return materiaOrganica; 
+    }
+
+    void setCarbono(double carbono) {
+        if(carbono>0.01){
+            this.carbono = carbono/1.72*10;
+        }else{
+            this.carbono = 0;
+        }
+    }
+
+    double getCarbono() {
+        return carbono;
+    }
+
+
   
+
 }
