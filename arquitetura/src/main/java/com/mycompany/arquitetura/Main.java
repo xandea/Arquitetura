@@ -14,11 +14,11 @@ public class Main {
         Solo s = new Solo(); 
         System.out.println("Valor antes"+s.getCalcio());
         System.out.println("Set solo = 1");
-        s.Valor_Solo(1);
+        s.calculaSoloIdeial(1);
         System.out.println("Valor depois"+s.getCalcio()+"\n");
         
         System.out.println("Set solo = 2");
-        s.Valor_Solo(2);
+        s.calculaSoloIdeial(2);
         System.out.println("Valor depois"+s.getCalcio());
         
     }

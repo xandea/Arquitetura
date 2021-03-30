@@ -21,9 +21,9 @@ public class Solo {
     private double materiaOrganica;
     private double carbono;
   
-    public Solo Valor_Solo(int valor_textura){
+    public Solo calculaSoloIdeial(int valorTextura){
         Solo s = new Solo();
-        switch (valor_textura) {
+        switch (valorTextura) {
             case 1:
                 setFosforo(9.0);
                 setPotassio(0.35);
@@ -45,6 +45,30 @@ public class Solo {
                 break;
         }
         return s;
+    }
+    
+    void setMateriaOrganica(double materiaOrganica) {
+        if(materiaOrganica>0.01){
+            this.materiaOrganica = materiaOrganica/10;
+        }else{
+            this.materiaOrganica = 0;
+        }  
+    }
+
+    double getMateriaOrganica() {
+        return materiaOrganica; 
+    }
+
+    void setCarbono(double carbono) {
+        if(carbono>0.01){
+            this.carbono = carbono/1.72*10;
+        }else{
+            this.carbono = 0;
+        }
+    }
+
+    double getCarbono() {
+        return carbono;
     }
 
     public double getFosforo() {
@@ -102,32 +126,4 @@ public class Solo {
     public void setHal(double hal) {
         this.hal = hal;
     }
-
-    void setMateriaOrganica(double materiaOrganica) {
-        if(materiaOrganica>0.01){
-            this.materiaOrganica = materiaOrganica/10;
-        }else{
-            this.materiaOrganica = 0;
-        }  
-    }
-
-    double getMateriaOrganica() {
-        return materiaOrganica; 
-    }
-
-    void setCarbono(double carbono) {
-        if(carbono>0.01){
-            this.carbono = carbono/1.72*10;
-        }else{
-            this.carbono = 0;
-        }
-    }
-
-    double getCarbono() {
-        return carbono;
-    }
-
-
-  
-
 }

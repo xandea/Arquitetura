@@ -43,35 +43,41 @@ public class SoloTest {
      
      */
     @Test
-    public void testValor_Solo() {
+    public void ideal1ValorSolo() {
         Solo s = new Solo();
-        s.Valor_Solo(1);
+        s.calculaSoloIdeial(1);
         assertEquals(9.0, s.getFosforo());
     }
     
     @Test
-    public void test2Valor_Solo() {
+    public void ideal2ValorSolo() {
         Solo s = new Solo();
-        s.Valor_Solo(2);
+        s.calculaSoloIdeial(2);
         assertEquals(12.0, s.getFosforo());
     }
     
     @Test
-    public void testMO(){
+    public void idealMO(){
         Solo s = new Solo();
         s.setMateriaOrganica(30.7);
         assertEquals(3.07,s.getMateriaOrganica());
     }
     
     @Test
-    public void testCarbono(){
+    public void idealCarbono(){
         Solo s = new Solo();
         s.setMateriaOrganica(30.7);
         s.setCarbono(s.getMateriaOrganica());
         assertEquals(17.848837209302324,s.getCarbono());
+    }
 
+    @Test
+    public void testaSCMOL(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(7.54,c.calculaSCMOL(0.15,5.76,1.63));   
     }
     
-
+    
+  
     
 }
