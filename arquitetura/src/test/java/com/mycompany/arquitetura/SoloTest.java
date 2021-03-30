@@ -77,7 +77,17 @@ public class SoloTest {
         assertEquals(7.54,c.calculaSCMOL(0.15,5.76,1.63));   
     }
     
+    @Test
+    public void testaCTCCmol(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(12.89,c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63),5.35));
+    }
     
+    @Test
+    public void testaVPorcentagem(){
+        CorrecaoCTC c = new CorrecaoCTC();   
+        assertEquals(58.494957331264544,c.calculaVPorcentagem(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63),5.35),c.calculaSCMOL(0.15,5.76,1.63)));
+    }
   
     
 }
