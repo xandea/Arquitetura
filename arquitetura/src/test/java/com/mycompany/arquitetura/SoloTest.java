@@ -88,6 +88,11 @@ public class SoloTest {
         CorrecaoCTC c = new CorrecaoCTC();   
         assertEquals(58.494957331264544,c.calculaVPorcentagem(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63),5.35),c.calculaSCMOL(0.15,5.76,1.63)));
     }
-  
+    
+    @Test
+    public void testaMemoriaCalculoSulfatoSimplesKGHectare(){
+       MemoriadeCalculo m = new MemoriadeCalculo();
+       assertEquals(123.95079365079366,m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7));
+    }
     
 }
