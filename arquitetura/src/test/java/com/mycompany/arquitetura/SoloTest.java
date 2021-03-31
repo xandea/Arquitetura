@@ -124,5 +124,11 @@ public class SoloTest {
         CorrecaoCTC c = new CorrecaoCTC();
         assertEquals("Nitrogênio",c.nomeSegundoTipodeCorrecao(3));        
     }
+    @Test
+    public void testeCustoCorrecaoPporHa(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        MemoriadeCalculo m = new MemoriadeCalculo();
+        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1, 200)); 
+    }
     
 }

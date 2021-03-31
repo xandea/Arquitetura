@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="com.mycompany.arquitetura.SoloTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="com.mycompany.arquitetura.SoloTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -61,12 +61,13 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaMemoriaCalculoSulfatoSimplesKGHectare" time="0.002"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaSCMOL" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeSegundoTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testePrimeiroTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNecessidadeDeKadicionar" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCustoCorrecaoPporHa" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaCTCCmol" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaVPorcentagem" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testePrimeiroTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeSegundoTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNecessidadeDeKadicionar" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaSCMOL" time="0"/>
 </testsuite>

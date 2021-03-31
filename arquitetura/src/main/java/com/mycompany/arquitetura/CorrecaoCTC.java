@@ -5,6 +5,7 @@ package com.mycompany.arquitetura;
  * @author xande
  */
 public class CorrecaoCTC {
+     
     double calculaSCMOL(double potassio,double calcio,double magnesio){
         return potassio+calcio+magnesio;    
     }
@@ -154,5 +155,15 @@ public class CorrecaoCTC {
                 break;   
         }
         return elemento;
+    }
+    
+    double custoCorrecaoPporHa(double calculaSulfatoSimplesKGAlqueiro,int fonteDeFostoroUtilizar, double precoDaFonte){
+        double custoCorrecaoPporHa = 0.0;
+        if(fonteDeFostoroUtilizar>0 && fonteDeFostoroUtilizar<13){
+            custoCorrecaoPporHa = calculaSulfatoSimplesKGAlqueiro/1000*precoDaFonte/2.42;
+        }else{
+            custoCorrecaoPporHa = 0.0;
+        }
+        return custoCorrecaoPporHa;
     }
 }

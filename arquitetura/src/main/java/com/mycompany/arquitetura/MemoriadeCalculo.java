@@ -57,7 +57,7 @@ public class MemoriadeCalculo {
         return calculoDaQuantidadeDeKGdeFosforoSimples;
     }
     
-    double calculaSulfatoSimplesKGAlqueiro(
+    double calculaSulfatoSimplesKGAlqueiro(//B24
             double teorFosforoAtingir,//D22
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
