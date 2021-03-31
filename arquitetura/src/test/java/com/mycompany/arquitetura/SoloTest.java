@@ -107,4 +107,11 @@ public class SoloTest {
         CorrecaoCTC c = new CorrecaoCTC();
         assertEquals(12.395079365079365,c.correcaoEnxofre(m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7),1));        
     }
+    
+    @Test
+    public void testeCorrecaoCalcio(){
+        MemoriadeCalculo m = new MemoriadeCalculo();
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(34.70622222222223,c.correcaoCalcio(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1));        
+    }
 }

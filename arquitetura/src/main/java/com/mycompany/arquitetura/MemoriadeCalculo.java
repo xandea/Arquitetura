@@ -57,6 +57,22 @@ public class MemoriadeCalculo {
         return calculoDaQuantidadeDeKGdeFosforoSimples;
     }
     
+    double calculaSulfatoSimplesKGAlqueiro(
+            double teorFosforoAtingir,//D22
+            double fosforo,//B11
+            int fonteDeFostoroUtilizar,//D23
+            double eficienciaDoFosforo){
+        double calculaSulfatoSimplesKGAlqueiro=0.0;
+        
+        calculaSulfatoSimplesKGAlqueiro = calculaSulfatoSimplesKGHectare(
+            teorFosforoAtingir,//D22
+            fosforo,//B11
+            fonteDeFostoroUtilizar,//D23
+            eficienciaDoFosforo)*2.42;
+        
+        return calculaSulfatoSimplesKGAlqueiro;
+    }
+    
     double necessidadeDeKadicionar(//F51
             double participacaoPnaCTCDesejada,//F35
             double potassio,//D11

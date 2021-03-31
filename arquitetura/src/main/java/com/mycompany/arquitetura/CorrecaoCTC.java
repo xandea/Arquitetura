@@ -41,4 +41,50 @@ public class CorrecaoCTC {
         }
         return correcaoEnxofre;
     }
+    
+    double correcaoCalcio(
+            double calculaSulfatoSimplesKGAlqueiro,//B24
+            int fonteDeFostoroUtilizar//D23
+            ){
+        double correcaoCalcio = 0.0;
+        switch(fonteDeFostoroUtilizar){
+            case 1:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.28;
+                break;
+            case 2:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.2;
+                break;
+            case 3:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.09;
+                break;
+            case 4:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.16;
+                break;
+            case 5:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.28;
+                break;
+            case 6:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.52;
+                break;
+            case 7:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.52;
+                break;
+            case 8:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.45;
+                break;
+            case 9:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.28;
+                break;
+            case 10:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.44;
+                break;
+            case 11:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.0;
+                break;
+            case 12:
+                correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.18;
+                break;
+        }
+        return correcaoCalcio/2.42;
+    }
 }
