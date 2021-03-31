@@ -17,7 +17,7 @@ public class CorrecaoCTC {
         return 100*calculaSCMOL/calculaCTCMOL;
     }
     
-    double correcaoEnxofre(
+    double calculoPrimeiroTipodeCorrecao(
             double calculaSulfatoSimplesKGHectare,//B22
             int fonteDeFostoroUtilizar){//D23
         
@@ -42,7 +42,7 @@ public class CorrecaoCTC {
         return correcaoEnxofre;
     }
     
-    double correcaoCalcio(
+    double calculoSegundoTipodeCorrecao(
             double calculaSulfatoSimplesKGAlqueiro,//B24
             int fonteDeFostoroUtilizar//D23
             ){
@@ -91,7 +91,7 @@ public class CorrecaoCTC {
         return correcaoCalcio/2.42;
     }
     
-    String tipoCorrecaoPrimeiraOpcao(int fonteDeFostoroUtilizar){
+    String nomePrimeiroTipodeCorrecao(int fonteDeFostoroUtilizar){
         String elemento = "";
         switch(fonteDeFostoroUtilizar){
             case 1:
@@ -110,7 +110,7 @@ public class CorrecaoCTC {
         return elemento;
     } 
 
-    String tipoCorrecaoSegundaOpcao(int fonteDeFostoroUtilizar) {
+    String nomeSegundoTipodeCorrecao(int fonteDeFostoroUtilizar) {
         String elemento = "";
         switch(fonteDeFostoroUtilizar){
             case 1:

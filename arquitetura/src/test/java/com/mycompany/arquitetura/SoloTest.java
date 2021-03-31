@@ -102,27 +102,27 @@ public class SoloTest {
     }
     
     @Test
-    public void testeCorrecaoEnxofre(){
+    public void testeCalculoPrimeiroTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(12.395079365079365,c.correcaoEnxofre(m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7),1));        
+        assertEquals(12.395079365079365,c.calculoPrimeiroTipodeCorrecao(m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7),1));        
     }
     
     @Test
-    public void testeCorrecaoCalcio(){
+    public void testeCalculoSegundoTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(34.70622222222223,c.correcaoCalcio(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1));        
+        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecao(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1));        
     }
     @Test
     public void testePrimeiroTipodeCorrecao(){
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals("Magnésio",c.tipoCorrecaoPrimeiraOpcao(5));        
+        assertEquals("Magnésio",c.nomePrimeiroTipodeCorrecao(5));        
     }
     @Test
-    public void testeSegundaTipodeCorrecao(){
+    public void testeSegundoTipodeCorrecao(){
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals("Magnésio",c.tipoCorrecaoSegundaOpcao(5));        
+        assertEquals("Nitrogênio",c.nomeSegundoTipodeCorrecao(3));        
     }
     
 }
