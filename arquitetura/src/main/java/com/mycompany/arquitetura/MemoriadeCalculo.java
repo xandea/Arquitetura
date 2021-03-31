@@ -56,4 +56,20 @@ public class MemoriadeCalculo {
         double calculoDaQuantidadeDeKGdeFosforoSimples = 100/teordeP2O5*((teorFosforoAtingir-fosforo)*2*2.29*100/eficienciaDoFosforo/100); 
         return calculoDaQuantidadeDeKGdeFosforoSimples;
     }
+    
+    double necessidadeDeKadicionar(//F51
+            double participacaoPnaCTCDesejada,//F35
+            double potassio,//D11
+            double aluminio,//L11
+            double calcio,//F11
+            double magnesio){//H11
+        CorrecaoCTC c = new CorrecaoCTC();  
+        double CTCMOL = 0.0;
+        double participacaoAtualdoPnaCTC = 0.0;
+       
+        CTCMOL = c.calculaCTCMOL(c.calculaSCMOL(potassio,calcio,magnesio),aluminio);
+        participacaoAtualdoPnaCTC = potassio/CTCMOL;
+        
+        return ((potassio*participacaoPnaCTCDesejada/participacaoAtualdoPnaCTC)-potassio);
+    }
 }

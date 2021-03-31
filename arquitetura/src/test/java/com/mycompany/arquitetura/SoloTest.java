@@ -95,4 +95,10 @@ public class SoloTest {
        assertEquals(123.95079365079366,m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7));
     }
     
+    @Test
+    public void testeNecessidadeDeKadicionar(){
+       MemoriadeCalculo m = new MemoriadeCalculo();
+       assertEquals(0.2367,m.necessidadeDeKadicionar(0.03, 0.15, 5.35, 5.76, 1.63));
+    }
+    
 }
