@@ -101,4 +101,10 @@ public class SoloTest {
        assertEquals(0.2367,m.necessidadeDeKadicionar(0.03, 0.15, 5.35, 5.76, 1.63));
     }
     
+    @Test
+    public void testeCorrecaoEnxofre(){
+        MemoriadeCalculo m = new MemoriadeCalculo();
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(12.395079365079365,c.correcaoEnxofre(m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7),1));        
+    }
 }

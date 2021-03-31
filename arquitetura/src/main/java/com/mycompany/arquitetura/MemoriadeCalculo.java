@@ -72,4 +72,6 @@ public class MemoriadeCalculo {
         
         return ((potassio*participacaoPnaCTCDesejada/participacaoAtualdoPnaCTC)-potassio);
     }
+    
+     
 }
