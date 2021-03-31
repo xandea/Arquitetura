@@ -6,7 +6,7 @@ package com.mycompany.arquitetura;
  */
 public class MemoriadeCalculo {
     
-    double calculaSulfatoSimplesKGHectare(//B22 da memoria de calculo
+    double calculaQTDKgHectareDaFonte(//B22 da memoria de calculo
             double teorFosforoAtingir,//D22
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
@@ -53,41 +53,32 @@ public class MemoriadeCalculo {
                 System.out.println("ERRO: na inserção da Fonte de Fosforo a utilizar");
                 break;
         }
-        double calculoDaQuantidadeDeKGdeFosforoSimples = 100/teordeP2O5*((teorFosforoAtingir-fosforo)*2*2.29*100/eficienciaDoFosforo/100); 
-        return calculoDaQuantidadeDeKGdeFosforoSimples;
+        double calculaQTDKgHectareDaFonte = 100/teordeP2O5*((teorFosforoAtingir-fosforo)*2*2.29*100/eficienciaDoFosforo/100); 
+        return calculaQTDKgHectareDaFonte;
     }
     
-    double calculaSulfatoSimplesKGAlqueiro(//B24
+    double calculaKgAlqueiroDaFonte(//B24
             double teorFosforoAtingir,//D22
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){
-        double calculaSulfatoSimplesKGAlqueiro=0.0;
+        double calculaKgAlqueiroDaFonte=0.0;
         
-        calculaSulfatoSimplesKGAlqueiro = calculaSulfatoSimplesKGHectare(
+        calculaKgAlqueiroDaFonte = calculaQTDKgHectareDaFonte(
             teorFosforoAtingir,//D22
             fosforo,//B11
             fonteDeFostoroUtilizar,//D23
             eficienciaDoFosforo)*2.42;
         
-        return calculaSulfatoSimplesKGAlqueiro;
+        return calculaKgAlqueiroDaFonte;
     }
     
-    double necessidadeDeKadicionar(//F51
-            double participacaoPnaCTCDesejada,//F35
-            double potassio,//D11
-            double aluminio,//L11
-            double calcio,//F11
-            double magnesio){//H11
-        CorrecaoCTC c = new CorrecaoCTC();  
-        double CTCMOL = 0.0;
-        double participacaoAtualdoPnaCTC = 0.0;
-       
-        CTCMOL = c.calculaCTCMOL(c.calculaSCMOL(potassio,calcio,magnesio),aluminio);
-        participacaoAtualdoPnaCTC = potassio/CTCMOL;
-        
-        return ((potassio*participacaoPnaCTCDesejada/participacaoAtualdoPnaCTC)-potassio);
-    }
-    
+    double necessidadeDePotassioAdicionar(//F51
+            double participacaoPotassioNaCTCDesejada,//F35 o valor em % está certo, não precisa converter
+            double participacaoAtualdoPotassionaCTC,//F34
+            double potassio//D11
+            ){
+        return ((potassio*participacaoPotassioNaCTCDesejada/participacaoAtualdoPotassionaCTC)-potassio);
+    }  
      
 }

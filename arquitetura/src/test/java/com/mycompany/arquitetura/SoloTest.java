@@ -90,29 +90,30 @@ public class SoloTest {
     }
     
     @Test
-    public void testaMemoriaCalculoSulfatoSimplesKGHectare(){
+    public void testaMemoriaCalculaQTDKgHectaredaFonte(){
        MemoriadeCalculo m = new MemoriadeCalculo();
-       assertEquals(123.95079365079366,m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7));
+       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7));
     }
-    
+
     @Test
-    public void testeNecessidadeDeKadicionar(){
+    public void testeNecessidadeDePotassioAdicionarMemoriadeCalculo(){
        MemoriadeCalculo m = new MemoriadeCalculo();
-       assertEquals(0.2367,m.necessidadeDeKadicionar(0.03, 0.15, 5.35, 5.76, 1.63));
+       CorrecaoCTC c = new CorrecaoCTC();
+       assertEquals(0.2367,m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15));
     }
     
     @Test
     public void testeCalculoPrimeiroTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(12.395079365079365,c.calculoPrimeiroTipodeCorrecao(m.calculaSulfatoSimplesKGHectare(12.0,8.59,1,0.7),1));        
+        assertEquals(12.395079365079367,c.calculoPrimeiroTipodeCorrecao(m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7),1));        
     }
     
     @Test
     public void testeCalculoSegundoTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecao(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1));        
+        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecao(m.calculaKgAlqueiroDaFonte(12.0,8.59,1,0.7), 1));        
     }
     @Test
     public void testePrimeiroTipodeCorrecao(){
@@ -128,7 +129,36 @@ public class SoloTest {
     public void testeCustoCorrecaoPporHa(){
         CorrecaoCTC c = new CorrecaoCTC();
         MemoriadeCalculo m = new MemoriadeCalculo();
-        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1, 200)); 
+        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonte(12.0,8.59,1,0.7), 1, 200)); 
+    }
+    @Test
+    public void testeQuantidadeAaplicar(){
+        MemoriadeCalculo m = new MemoriadeCalculo();
+        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7)); 
+    }
+    @Test
+    public void testeParticipacaoAtualdoPnaCTC(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(1.1636927851047323,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15)); 
+    }
+    @Test
+    public void testeParticipacaoDoPnaCTCposCorrecao(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(3,c.participacaoDoPnaCTCposCorrecao(3)); 
+    }
+    @Test
+    public void testeParticipacaoIdealdoPnaCTC(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals(3,c.participacaoIdealdoPnaCTC(2)); 
+    }
+    @Test
+    public void testeCalculaQTDKgHectareDeK2O(){
+       CorrecaoCTC c = new CorrecaoCTC();
+       MemoriadeCalculo m = new MemoriadeCalculo();
+       
+       double necessidadeDePotassioAdicionar = 0.0;
+       necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
+       assertEquals(450.5462068965517,c.calculaQTDKgHectareDeK2O(85,necessidadeDePotassioAdicionar,1)); 
     }
     
 }
