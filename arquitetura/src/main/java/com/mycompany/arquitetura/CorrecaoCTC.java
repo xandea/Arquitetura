@@ -36,7 +36,7 @@ public class CorrecaoCTC {
                 correcaoEnxofre=calculaSulfatoSimplesKGAlqueiro*0.11/2.42;
                 break;
             default:   
-                System.out.println("ERRO: Tipo de textura de solo");
+                correcaoEnxofre=0.0;
                 break;
         }
         return correcaoEnxofre;
@@ -84,7 +84,75 @@ public class CorrecaoCTC {
             case 12:
                 correcaoCalcio = calculaSulfatoSimplesKGAlqueiro*0.18;
                 break;
+            default:   
+                correcaoCalcio = 0.0;
+                break;
         }
         return correcaoCalcio/2.42;
+    }
+    
+    String tipoCorrecaoPrimeiraOpcao(int fonteDeFostoroUtilizar){
+        String elemento = "";
+        switch(fonteDeFostoroUtilizar){
+            case 1:
+                elemento="Enxofre";
+                break;
+            case 5:
+                elemento="Magnésio";
+                break;
+            case 12:
+                elemento="Enxofre";
+                break;
+            default:   
+                elemento = "";
+                break;   
+        }
+        return elemento;
+    } 
+
+    String tipoCorrecaoSegundaOpcao(int fonteDeFostoroUtilizar) {
+        String elemento = "";
+        switch(fonteDeFostoroUtilizar){
+            case 1:
+                elemento="Cálcio";
+                break;
+            case 2:
+                elemento="Cálcio";
+                break;
+            case 3:
+                elemento="Nitrogênio";
+                break;
+            case 4:
+                elemento="Nitrogênio";
+                break;
+            case 5:
+                elemento="Cálcio";
+                break;
+            case 6:
+                elemento="Cálcio";
+                break;
+            case 7:
+                elemento="Cálcio";
+                break;
+            case 8:
+                elemento="Cálcio";
+                break;
+            case 9:
+                elemento="Cálcio";
+                break;
+            case 10:
+                elemento="Cálcio";
+                break;
+            case 11:
+                elemento="";
+                break;
+            case 12:
+                elemento="Cálcio";
+                break;
+            default:   
+                elemento = "";
+                break;   
+        }
+        return elemento;
     }
 }

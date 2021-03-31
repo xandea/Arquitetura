@@ -114,4 +114,15 @@ public class SoloTest {
         CorrecaoCTC c = new CorrecaoCTC();
         assertEquals(34.70622222222223,c.correcaoCalcio(m.calculaSulfatoSimplesKGAlqueiro(12.0,8.59,1,0.7), 1));        
     }
+    @Test
+    public void testePrimeiroTipodeCorrecao(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals("Magnésio",c.tipoCorrecaoPrimeiraOpcao(5));        
+    }
+    @Test
+    public void testeSegundaTipodeCorrecao(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals("Magnésio",c.tipoCorrecaoSegundaOpcao(5));        
+    }
+    
 }
