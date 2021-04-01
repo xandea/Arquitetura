@@ -3,6 +3,7 @@
 
 ## Modelos ideais
 <p>A modelagem dos valores ideais seguem conforme apresentado na planilha excel de correção de solos.</p>
+<p>Como é muito extenso o mapeamento, segue no link do Miro: https://miro.com/app/board/o9J_lRwHN5c=/
 <p>Desenvolvido no Miro.</p>
 
 ![Flowchart - Ideal (1)](https://user-images.githubusercontent.com/32207196/110216387-b9f10100-7e8d-11eb-8d0d-e9c6a596764b.jpg)
