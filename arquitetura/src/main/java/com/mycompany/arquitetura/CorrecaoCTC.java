@@ -18,7 +18,7 @@ public class CorrecaoCTC {
         return 100*calculaSCMOL/calculaCTCMOL;
     }
     
-    double calculoPrimeiroTipodeCorrecao(
+    double calculoPrimeiroTipodeCorrecaoDeFosforo(
             double calculaQTDKgHectareDaFonte,//B22
             int fonteDeFostoroUtilizar){//D23
         double correcaoEnxofre = 0.0;
@@ -40,53 +40,53 @@ public class CorrecaoCTC {
         return correcaoEnxofre;
     }
     
-    double calculoSegundoTipodeCorrecao(
-            double calculaKgAlqueiroDaFonte,//B24
+    double calculoSegundoTipodeCorrecaoDeFosforo(
+            double calculaKgAlqueiroDaFonteDeFosforo,//B24
             int fonteDeFostoroUtilizar//D23
             ){
-        double correcaoCalcio = 0.0;
+        double correcaoSegundoTipoDeFosforo = 0.0;
         switch(fonteDeFostoroUtilizar){
             case 1:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.28;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 2:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.2;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.2;
                 break;
             case 3:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.09;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.09;
                 break;
             case 4:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.16;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.16;
                 break;
             case 5:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.28;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 6:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.52;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
                 break;
             case 7:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.52;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
                 break;
             case 8:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.45;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.45;
                 break;
             case 9:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.28;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 10:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.44;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.44;
                 break;
             case 11:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.0;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.0;
                 break;
             case 12:
-                correcaoCalcio = calculaKgAlqueiroDaFonte*0.18;
+                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.18;
                 break;
             default:   
-                correcaoCalcio = 0.0;
+                correcaoSegundoTipoDeFosforo = 0.0;
                 break;
         }
-        return correcaoCalcio/2.42;
+        return correcaoSegundoTipoDeFosforo/2.42;
     }
     
     String nomePrimeiroTipodeCorrecao(int fonteDeFostoroUtilizar){
@@ -154,10 +154,10 @@ public class CorrecaoCTC {
         return elemento;
     }
     
-    double custoCorrecaoPporHa(double calculaKgAlqueiroDaFonte,int fonteDeFostoroUtilizar, double precoDaFonte){
+    double custoCorrecaoPporHa(double calculaKgAlqueiroDaFonteDeFosforo,int fonteDeFostoroUtilizar, double precoDaFonte){
         double custoCorrecaoPporHa = 0.0;
         if(fonteDeFostoroUtilizar>0 && fonteDeFostoroUtilizar<13){
-            custoCorrecaoPporHa = calculaKgAlqueiroDaFonte/1000*precoDaFonte/2.42;
+            custoCorrecaoPporHa = calculaKgAlqueiroDaFonteDeFosforo/1000*precoDaFonte/2.42;
         }else{
             custoCorrecaoPporHa = 0.0;
         }
@@ -186,39 +186,71 @@ public class CorrecaoCTC {
         }
     }
     
-    double calculaQTDKgHectareDeK2O(
+    double calculaQTDKgHectareDeFonteDePotassio(
             double eficienciaDoPotassio,//F59
-            double necessidadeDePotassioadicionar,//F51
+            double necessidadeDePotassioAdicionar,//F51
             int fontedePotassioUsar //D37
             ){
-        double QTDKgHectareDeK2O = 0.0;
-        double teorDeK2OdaFonte=0.0;//em %
+        double QTDKgHectareDeFonteDePotassio = 0.0;
+        double teorDaFonteDePotassio=0.0;//em %
         
-        if(necessidadeDePotassioadicionar>0.01){
+        if(necessidadeDePotassioAdicionar>0.01){
            switch(fontedePotassioUsar){
                case 1:
-                   teorDeK2OdaFonte=58.0;
+                   teorDaFonteDePotassio=58.0;
                    break;
                case 2:
-                   teorDeK2OdaFonte=52.0;
+                   teorDaFonteDePotassio=52.0;
                    break;
                case 3:
-                   teorDeK2OdaFonte=22.0;
+                   teorDaFonteDePotassio=22.0;
                    break;
                case 4:
-                   teorDeK2OdaFonte=44.0;
+                   teorDaFonteDePotassio=44.0;
                    break;
                default:
-                   teorDeK2OdaFonte=0.0;
+                   teorDaFonteDePotassio=0.0;
                    break;
            } 
-        QTDKgHectareDeK2O = necessidadeDePotassioadicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDeK2OdaFonte;
-        return QTDKgHectareDeK2O;   
+        QTDKgHectareDeFonteDePotassio = necessidadeDePotassioAdicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDaFonteDePotassio;
+        return QTDKgHectareDeFonteDePotassio;   
         
         }else{
             return 0.0;
         }  
     }
     
+    double calculaCustoPorHectareDeFonteDePotassio(
+            int texturaSolo,
+            int fontedePotassioUsar,
+            double valorDaFontePorTonelada,
+            double QTDKgHectareDeFonteDePotassio){
+        double custoPorHectareDeFonteDePotassio = 0.0;
+        switch(fontedePotassioUsar){
+            case 1:
+                custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
+                break;
+            case 2:
+                custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
+                break;
+            case 3:
+                custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
+                break;
+            case 4:
+                switch(texturaSolo){
+                    case 1:
+                        custoPorHectareDeFonteDePotassio = 0.7*QTDKgHectareDeFonteDePotassio/1000;
+                        break;
+                    case 2:
+                        custoPorHectareDeFonteDePotassio = 0.5*QTDKgHectareDeFonteDePotassio/1000;
+                        break;    
+                }
+                break;
+            default:
+                custoPorHectareDeFonteDePotassio = 0.0;
+                break;
+        }
+    return custoPorHectareDeFonteDePotassio;
+    }
     
 }

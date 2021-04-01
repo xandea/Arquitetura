@@ -6,7 +6,7 @@ package com.mycompany.arquitetura;
  */
 public class MemoriadeCalculo {
     
-    double calculaQTDKgHectareDaFonte(//B22 da memoria de calculo
+    double calculaQTDKgHectareDaFonteDeFosforo(//B22 da memoria de calculo
             double teorFosforoAtingir,//D22
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
@@ -53,24 +53,24 @@ public class MemoriadeCalculo {
                 System.out.println("ERRO: na inserção da Fonte de Fosforo a utilizar");
                 break;
         }
-        double calculaQTDKgHectareDaFonte = 100/teordeP2O5*((teorFosforoAtingir-fosforo)*2*2.29*100/eficienciaDoFosforo/100); 
-        return calculaQTDKgHectareDaFonte;
+        double calculaQTDKgHectareDaFonteDeFosforo = 100/teordeP2O5*((teorFosforoAtingir-fosforo)*2*2.29*100/eficienciaDoFosforo/100); 
+        return calculaQTDKgHectareDaFonteDeFosforo;
     }
     
-    double calculaKgAlqueiroDaFonte(//B24
+    double calculaKgAlqueiroDaFonteDeFosforo(//B24
             double teorFosforoAtingir,//D22
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){
-        double calculaKgAlqueiroDaFonte=0.0;
+        double calculaKgAlqueiroDaFonteDeFosforo=0.0;
         
-        calculaKgAlqueiroDaFonte = calculaQTDKgHectareDaFonte(
+        calculaKgAlqueiroDaFonteDeFosforo = calculaQTDKgHectareDaFonteDeFosforo(
             teorFosforoAtingir,//D22
             fosforo,//B11
             fonteDeFostoroUtilizar,//D23
             eficienciaDoFosforo)*2.42;
         
-        return calculaKgAlqueiroDaFonte;
+        return calculaKgAlqueiroDaFonteDeFosforo;
     }
     
     double necessidadeDePotassioAdicionar(//F51

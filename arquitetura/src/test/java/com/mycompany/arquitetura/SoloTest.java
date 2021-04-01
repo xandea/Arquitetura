@@ -90,9 +90,9 @@ public class SoloTest {
     }
     
     @Test
-    public void testaMemoriaCalculaQTDKgHectaredaFonte(){
+    public void testaMemoriacalculaQTDKgHectareDaFonteDeFosforo(){
        MemoriadeCalculo m = new MemoriadeCalculo();
-       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7));
+       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7));
     }
 
     @Test
@@ -106,14 +106,14 @@ public class SoloTest {
     public void testeCalculoPrimeiroTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(12.395079365079367,c.calculoPrimeiroTipodeCorrecao(m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7),1));        
+        assertEquals(12.395079365079367,c.calculoPrimeiroTipodeCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7),1));        
     }
     
     @Test
     public void testeCalculoSegundoTipodeCorrecao(){
         MemoriadeCalculo m = new MemoriadeCalculo();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecao(m.calculaKgAlqueiroDaFonte(12.0,8.59,1,0.7), 1));        
+        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecaoDeFosforo(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,1,0.7), 1));        
     }
     @Test
     public void testePrimeiroTipodeCorrecao(){
@@ -129,12 +129,12 @@ public class SoloTest {
     public void testeCustoCorrecaoPporHa(){
         CorrecaoCTC c = new CorrecaoCTC();
         MemoriadeCalculo m = new MemoriadeCalculo();
-        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonte(12.0,8.59,1,0.7), 1, 200)); 
+        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,1,0.7), 1, 200)); 
     }
     @Test
     public void testeQuantidadeAaplicar(){
         MemoriadeCalculo m = new MemoriadeCalculo();
-        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonte(12.0,8.59,1,0.7)); 
+        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7)); 
     }
     @Test
     public void testeParticipacaoAtualdoPnaCTC(){
@@ -152,13 +152,20 @@ public class SoloTest {
         assertEquals(3,c.participacaoIdealdoPnaCTC(2)); 
     }
     @Test
-    public void testeCalculaQTDKgHectareDeK2O(){
+    public void testeCalculaQTDKgHectareDeFonteDePotassio(){
        CorrecaoCTC c = new CorrecaoCTC();
-       MemoriadeCalculo m = new MemoriadeCalculo();
-       
+       MemoriadeCalculo m = new MemoriadeCalculo();   
        double necessidadeDePotassioAdicionar = 0.0;
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
-       assertEquals(450.5462068965517,c.calculaQTDKgHectareDeK2O(85,necessidadeDePotassioAdicionar,1)); 
+       assertEquals(450.5462068965517,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1)); 
+    }
+    @Test
+    public void testeCalculaCustoPorHectareDeFonteDePotassio(){
+        CorrecaoCTC c = new CorrecaoCTC();
+       MemoriadeCalculo m = new MemoriadeCalculo();   
+       double necessidadeDePotassioAdicionar = 0.0;
+       necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
+       assertEquals(225.27310344827586,c.calculaCustoPorHectareDeFonteDePotassio(1, 1,500.0, c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1))); 
     }
     
 }
