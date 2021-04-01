@@ -167,5 +167,18 @@ public class SoloTest {
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
        assertEquals(225.27310344827586,c.calculaCustoPorHectareDeFonteDePotassio(1, 1,500.0, c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1))); 
     }
+    @Test
+    public void testeDescricaoTipodeCorrecaoDePotassio(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        assertEquals("Essa correção de Potássio fornecerá também:",c.descricaoTipoDeCorrecaoDePotassio(2)); 
+    }
+    @Test
+    public void testeCalculoPrimeiroTipodeCorrecaoDePotassio(){
+        CorrecaoCTC c = new CorrecaoCTC();
+        MemoriadeCalculo m = new MemoriadeCalculo(); 
+        double necessidadeDePotassioAdicionar = 0.0;
+        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
+        assertEquals(85.43049230769232,c.calculoPrimeiroTipodeCorrecaoDePotassio(2,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,2))); 
+    }
     
 }

@@ -213,6 +213,7 @@ public class CorrecaoCTC {
                    break;
            } 
         QTDKgHectareDeFonteDePotassio = necessidadeDePotassioAdicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDaFonteDePotassio;
+            
         return QTDKgHectareDeFonteDePotassio;   
         
         }else{
@@ -251,6 +252,41 @@ public class CorrecaoCTC {
                 break;
         }
     return custoPorHectareDeFonteDePotassio;
+    }
+
+    String descricaoTipoDeCorrecaoDePotassio(int tipoDefonteDePotassio) {
+        String descricaoTipoDeCorrecaoDePotassio="";
+        switch(tipoDefonteDePotassio){
+            case 1:
+                descricaoTipoDeCorrecaoDePotassio="";
+                break;
+            case 2:
+                descricaoTipoDeCorrecaoDePotassio="Essa correção de Potássio fornecerá também:";
+                break;
+            case 3:
+                descricaoTipoDeCorrecaoDePotassio="Essa correção de Potássio fornecerá também:";
+                break;    
+        }
+        return descricaoTipoDeCorrecaoDePotassio;
+    }
+    
+    double calculoPrimeiroTipodeCorrecaoDePotassio(
+            int tipoDefonteDePotassio,//D37
+            double QTDKgHectareDeFonteDePotassio
+            ){
+        double primeiroTipodeCorrecaoDePotassio=0.0;
+        switch(tipoDefonteDePotassio){
+            case 1:
+                primeiroTipodeCorrecaoDePotassio=0.0;
+                break;
+            case 2:
+                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.17;
+                break;
+            case 3:
+                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.22;
+                break;    
+        }
+    return primeiroTipodeCorrecaoDePotassio;    
     }
     
 }
