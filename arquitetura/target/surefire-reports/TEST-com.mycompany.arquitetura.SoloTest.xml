@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="1" name="com.mycompany.arquitetura.SoloTest" time="0.037" errors="0" skipped="0">
+<testsuite tests="19" failures="1" name="com.mycompany.arquitetura.SoloTest" time="0.036" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -60,31 +60,32 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaMemoriacalculaQTDKgHectareDaFonteDeFosforo" time="0.002"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoDoPnaCTCposCorrecao" time="0.002"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculaQTDKgHectareDeFonteDePotassio" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoDoPnaCTCposCorrecao" time="0.001"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeDescricaoTipodeCorrecaoDePotassio" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculaCustoPorHectareDeFonteDePotassio" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecaoDePotassio" time="0.034">
-    <failure message="expected: &lt;85.43&gt; but was: &lt;85.43049230769232&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;85.43&gt; but was: &lt;85.43049230769232&gt;
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaMemoriacalculaQTDKgHectareDaFonteDeFosforo" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeDescricaoTipodeCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecaoDePotassio" time="0.034">
+    <failure message="expected: &lt;213.8&gt; but was: &lt;213.80465454545453&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;213.8&gt; but was: &lt;213.80465454545453&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:65)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:868)
-	at com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecaoDePotassio(SoloTest.java:181)
+	at com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecaoDePotassio(SoloTest.java:189)
 </failure>
   </testcase>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCustoCorrecaoPporHa" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeQuantidadeAaplicar" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testePrimeiroTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeSegundoTipodeCorrecao" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNecessidadeDePotassioAdicionarMemoriadeCalculo" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaCTCCmol" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaVPorcentagem" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaSCMOL" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoAtualdoPnaCTC" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaCTCCmol" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testePrimeiroTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoIdealdoPnaCTC" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeSegundoTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeQuantidadeAaplicar" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCustoCorrecaoPporHa" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoAtualdoPnaCTC" time="0"/>
 </testsuite>

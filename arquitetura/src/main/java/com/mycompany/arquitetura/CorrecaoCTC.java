@@ -289,4 +289,23 @@ public class CorrecaoCTC {
     return primeiroTipodeCorrecaoDePotassio;    
     }
     
+    double calculoSegundoTipodeCorrecaoDePotassio(
+            int tipoDefonteDePotassio,//D37
+            double QTDKgHectareDeFonteDePotassio
+            ){
+        double primeiroTipodeCorrecaoDePotassio=0.0;
+        switch(tipoDefonteDePotassio){
+            case 1:
+                primeiroTipodeCorrecaoDePotassio=0.0;
+                break;
+            case 2:
+                primeiroTipodeCorrecaoDePotassio=0.0;
+                break;
+            case 3:
+                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.18;
+                break;    
+        }
+    return primeiroTipodeCorrecaoDePotassio;    
+    }
+    
 }
