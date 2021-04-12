@@ -18,78 +18,78 @@ public class CorrecaoCTC {
         return 100*calculaSCMOL/calculaCTCMOL;
     }
     
-    double calculoPrimeiroTipodeCorrecaoDeFosforo(
+    double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo (
             double calculaQTDKgHectareDaFonte,//B22
             int fonteDeFostoroUtilizar){//D23
-        double correcaoEnxofre = 0.0;
+        double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo = 0.0;
        
         switch(fonteDeFostoroUtilizar){
             case 1:
-                correcaoEnxofre=calculaQTDKgHectareDaFonte*0.1;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo=calculaQTDKgHectareDaFonte*0.1;
                 break;
             case 5:
-                correcaoEnxofre=calculaQTDKgHectareDaFonte*0.15;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo=calculaQTDKgHectareDaFonte*0.15;
                 break;
             case 12:
-                correcaoEnxofre=calculaQTDKgHectareDaFonte*0.11;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo=calculaQTDKgHectareDaFonte*0.11;
                 break;
             default:   
-                correcaoEnxofre=0.0;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo=0.0;
                 break;
         }
-        return correcaoEnxofre;
+        return calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo;
     }
     
-    double calculoSegundoTipodeCorrecaoDeFosforo(
+    double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(
             double calculaKgAlqueiroDaFonteDeFosforo,//B24
             int fonteDeFostoroUtilizar//D23
             ){
-        double correcaoSegundoTipoDeFosforo = 0.0;
+        double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = 0.0;
         switch(fonteDeFostoroUtilizar){
             case 1:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 2:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.2;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.2;
                 break;
             case 3:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.09;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.09;
                 break;
             case 4:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.16;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.16;
                 break;
             case 5:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 6:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
                 break;
             case 7:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.52;
                 break;
             case 8:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.45;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.45;
                 break;
             case 9:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.28;
                 break;
             case 10:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.44;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.44;
                 break;
             case 11:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.0;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.0;
                 break;
             case 12:
-                correcaoSegundoTipoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.18;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = calculaKgAlqueiroDaFonteDeFosforo*0.18;
                 break;
             default:   
-                correcaoSegundoTipoDeFosforo = 0.0;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = 0.0;
                 break;
         }
-        return correcaoSegundoTipoDeFosforo/2.42;
+        return calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo/2.42;
     }
     
-    String nomePrimeiroTipodeCorrecao(int fonteDeFostoroUtilizar){
+    String nomeDoPrimeiroNutrienteParaCorrecaoDePotassio(int fonteDeFostoroUtilizar){
         if(fonteDeFostoroUtilizar == 1 || fonteDeFostoroUtilizar == 12){
             return "Enxofre";
         }else if(fonteDeFostoroUtilizar == 2){
@@ -99,7 +99,7 @@ public class CorrecaoCTC {
         }
     } 
 
-    String nomeSegundoTipodeCorrecao(int fonteDeFostoroUtilizar) {
+    String nomeDoSegundoNutrienteParaCorrecaoDePotassio(int fonteDeFostoroUtilizar) {
         if(fonteDeFostoroUtilizar >=5 && fonteDeFostoroUtilizar <=10 || 
                 fonteDeFostoroUtilizar == 1 || 
                 fonteDeFostoroUtilizar == 2 || 
@@ -228,42 +228,42 @@ public class CorrecaoCTC {
         return descricaoTipoDeCorrecaoDePotassio;
     }
     
-    double calculoPrimeiroTipodeCorrecaoDePotassio(
+    double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(
             int tipoDefonteDePotassio,//D37
             double QTDKgHectareDeFonteDePotassio
             ){
-        double primeiroTipodeCorrecaoDePotassio=0.0;
+        double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio=0.0;
         switch(tipoDefonteDePotassio){
             case 1:
-                primeiroTipodeCorrecaoDePotassio=0.0;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio=0.0;
                 break;
             case 2:
-                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.17;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.17;
                 break;
             case 3:
-                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.22;
+                calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.22;
                 break;    
         }
-    return primeiroTipodeCorrecaoDePotassio;    
+    return calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio;    
     }
     
-    double calculoSegundoTipodeCorrecaoDePotassio(
+    double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(
             int tipoDefonteDePotassio,//D37
             double QTDKgHectareDeFonteDePotassio
             ){
-        double primeiroTipodeCorrecaoDePotassio=0.0;
+        double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio=0.0;
         switch(tipoDefonteDePotassio){
             case 1:
-                primeiroTipodeCorrecaoDePotassio=0.0;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio=0.0;
                 break;
             case 2:
-                primeiroTipodeCorrecaoDePotassio=0.0;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio=0.0;
                 break;
             case 3:
-                primeiroTipodeCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.18;
+                calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio = QTDKgHectareDeFonteDePotassio*0.18;
                 break;    
         }
-    return primeiroTipodeCorrecaoDePotassio;    
+    return calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio;    
     }
     
 }
