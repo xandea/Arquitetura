@@ -90,68 +90,26 @@ public class CorrecaoCTC {
     }
     
     String nomePrimeiroTipodeCorrecao(int fonteDeFostoroUtilizar){
-        String elemento = "";
-        switch(fonteDeFostoroUtilizar){
-            case 1:
-                elemento="Enxofre";
-                break;
-            case 5:
-                elemento="Magnésio";
-                break;
-            case 12:
-                elemento="Enxofre";
-                break;
-            default:   
-                elemento = "";
-                break;   
+        if(fonteDeFostoroUtilizar == 1 || fonteDeFostoroUtilizar == 12){
+            return "Enxofre";
+        }else if(fonteDeFostoroUtilizar == 2){
+            return "Magnésio";
+        }else{
+            return ""; 
         }
-        return elemento;
     } 
 
     String nomeSegundoTipodeCorrecao(int fonteDeFostoroUtilizar) {
-        String elemento = "";
-        switch(fonteDeFostoroUtilizar){
-            case 1:
-                elemento="Cálcio";
-                break;
-            case 2:
-                elemento="Cálcio";
-                break;
-            case 3:
-                elemento="Nitrogênio";
-                break;
-            case 4:
-                elemento="Nitrogênio";
-                break;
-            case 5:
-                elemento="Cálcio";
-                break;
-            case 6:
-                elemento="Cálcio";
-                break;
-            case 7:
-                elemento="Cálcio";
-                break;
-            case 8:
-                elemento="Cálcio";
-                break;
-            case 9:
-                elemento="Cálcio";
-                break;
-            case 10:
-                elemento="Cálcio";
-                break;
-            case 11:
-                elemento="";
-                break;
-            case 12:
-                elemento="Cálcio";
-                break;
-            default:   
-                elemento = "";
-                break;   
+        if(fonteDeFostoroUtilizar >=5 && fonteDeFostoroUtilizar <=10 || 
+                fonteDeFostoroUtilizar == 1 || 
+                fonteDeFostoroUtilizar == 2 || 
+                fonteDeFostoroUtilizar == 12){
+            return "Cálcio";
+        }else if(fonteDeFostoroUtilizar == 3 || fonteDeFostoroUtilizar== 4){
+            return "Nitrogênio";
+        }else{
+            return "";
         }
-        return elemento;
     }
     
     double custoCorrecaoPporHa(double calculaKgAlqueiroDaFonteDeFosforo,int fonteDeFostoroUtilizar, double precoDaFonte){
