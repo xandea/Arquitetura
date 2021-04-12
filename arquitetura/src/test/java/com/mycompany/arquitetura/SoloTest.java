@@ -92,7 +92,7 @@ public class SoloTest {
     @Test
     public void testaMemoriacalculaQTDKgHectareDaFonteDeFosforo(){
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7));
+       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7));
     }
 
     @Test
@@ -106,14 +106,14 @@ public class SoloTest {
     public void testeCalculoPrimeiroTipodeCorrecao(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(12.395079365079367,c.calculoPrimeiroTipodeCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7),1));        
+        assertEquals(12.395079365079367,c.calculoPrimeiroTipodeCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7),1));        
     }
     
     @Test
     public void testeCalculoSegundoTipodeCorrecao(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecaoDeFosforo(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,1,0.7), 1));        
+        assertEquals(34.70622222222223,c.calculoSegundoTipodeCorrecaoDeFosforo(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1));        
     }
     @Test
     public void testePrimeiroTipodeCorrecao(){
@@ -129,12 +129,12 @@ public class SoloTest {
     public void testeCustoCorrecaoPporHa(){
         CorrecaoCTC c = new CorrecaoCTC();
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,1,0.7), 1, 200)); 
+        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1, 200)); 
     }
     @Test
     public void testeQuantidadeAaplicar(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,1,0.7)); 
+        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7)); 
     }
     @Test
     public void testeParticipacaoAtualdoPnaCTC(){

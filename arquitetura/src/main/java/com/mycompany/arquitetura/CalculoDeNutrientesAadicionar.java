@@ -1,11 +1,7 @@
 package com.mycompany.arquitetura;
 
-/**
- *
- * @author xande
- */
 public class CalculoDeNutrientesAadicionar {
-    
+       
     double calculaQTDKgHectareDaFonteDeFosforo(//B22 da memoria de calculo
             double teorFosforoAtingir,//D22
             double fosforo,//B11
