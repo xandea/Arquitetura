@@ -4,7 +4,7 @@ package com.mycompany.arquitetura;
  *
  * @author xande
  */
-public class MemoriadeCalculo {
+public class CalculoDeNutrientesAadicionar {
     
     double calculaQTDKgHectareDaFonteDeFosforo(//B22 da memoria de calculo
             double teorFosforoAtingir,//D22
