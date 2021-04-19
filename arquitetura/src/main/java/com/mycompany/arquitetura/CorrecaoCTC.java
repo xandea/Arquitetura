@@ -91,11 +91,8 @@ public class CorrecaoCTC {
     }
     
     double participacaoDoPnaCTCposCorrecao(double participacaoPnaCTCDesejada){
-        if(participacaoPnaCTCDesejada>0.001){
-            return participacaoPnaCTCDesejada;
-        }else{
-            return 0.0;
-        }
+        if(participacaoPnaCTCDesejada<0.001) return 0.0;
+        return participacaoPnaCTCDesejada;
     }
     
     double participacaoIdealdoPnaCTC(int valorTextura){
