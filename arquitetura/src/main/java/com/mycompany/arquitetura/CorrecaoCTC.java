@@ -64,16 +64,12 @@ public class CorrecaoCTC {
     } 
 
     String nomeDoSegundoNutrienteParaCorrecaoDePotassio(int fonteDeFostoroUtilizar) {
-        if(fonteDeFostoroUtilizar >=5 && fonteDeFostoroUtilizar <=10 || 
-                fonteDeFostoroUtilizar == 1 || 
-                fonteDeFostoroUtilizar == 2 || 
-                fonteDeFostoroUtilizar == 12){
-            return "Cálcio";
-        }else if(fonteDeFostoroUtilizar == 3 || fonteDeFostoroUtilizar== 4){
-            return "Nitrogênio";
-        }else{
-            return "";
-        }
+        return switch(fonteDeFostoroUtilizar){
+            case 1,2,5,6,7,8,9,10,12 -> "Cálcio";
+            case 3,4 -> "Nitrogênio";
+            default -> "";
+        
+        };
     }
     
     double custoCorrecaoPporHa(double calculaQTDKgHectareDaFonteDeFosforo,int fonteDeFostoroUtilizar, double precoDaFonte){
