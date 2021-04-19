@@ -33,26 +33,21 @@ public class CorrecaoCTC {
     }
     
     double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(
-            double calculaKgAlqueiroDaFonteDeFosforo,//B24
+            double calculaQTDKgHectareDaFonteDeFosforo,//B24
             int fonteDeFostoroUtilizar//D23
             ){
-        double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo;
-        calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo = switch (fonteDeFostoroUtilizar) {
-            case 1 -> calculaKgAlqueiroDaFonteDeFosforo*0.28;
-            case 2 -> calculaKgAlqueiroDaFonteDeFosforo*0.2;
-            case 3 -> calculaKgAlqueiroDaFonteDeFosforo*0.09;
-            case 4 -> calculaKgAlqueiroDaFonteDeFosforo*0.16;
-            case 5 -> calculaKgAlqueiroDaFonteDeFosforo*0.28;
-            case 6 -> calculaKgAlqueiroDaFonteDeFosforo*0.52;
-            case 7 -> calculaKgAlqueiroDaFonteDeFosforo*0.52;
-            case 8 -> calculaKgAlqueiroDaFonteDeFosforo*0.45;
-            case 9 -> calculaKgAlqueiroDaFonteDeFosforo*0.28;
-            case 10 -> calculaKgAlqueiroDaFonteDeFosforo*0.44;
-            case 11 -> calculaKgAlqueiroDaFonteDeFosforo*0.0;
-            case 12 -> calculaKgAlqueiroDaFonteDeFosforo*0.18;
+        double quantidadeDeNutriente = switch (fonteDeFostoroUtilizar) {
+            case 1,5,9 -> 0.28;
+            case 2 -> 0.2;
+            case 3 -> 0.09;
+            case 4 -> 0.16;
+            case 6,7 -> 0.52;
+            case 8 -> 0.45;
+            case 10 -> 0.44;
+            case 12 -> 0.18;
             default -> 0.0;
         };
-        return calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo/2.42;
+        return quantidadeDeNutriente*calculaQTDKgHectareDaFonteDeFosforo;
     }
     
     String nomeDoPrimeiroNutrienteParaCorrecaoDePotassio(int fonteDeFostoroUtilizar){
@@ -68,7 +63,6 @@ public class CorrecaoCTC {
             case 1,2,5,6,7,8,9,10,12 -> "Cálcio";
             case 3,4 -> "Nitrogênio";
             default -> "";
-        
         };
     }
     
