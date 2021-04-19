@@ -22,14 +22,12 @@ public class CorrecaoCTC {
     double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo (
             double calculaQTDKgHectareDaFonte,//B22
             int fonteDeFostoroUtilizar){ //D23
-        double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo;
-        calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo = switch (fonteDeFostoroUtilizar) {
+        return switch (fonteDeFostoroUtilizar) {
             case 1 -> calculaQTDKgHectareDaFonte*0.1;
             case 5 -> calculaQTDKgHectareDaFonte*0.15;
             case 12 -> calculaQTDKgHectareDaFonte*0.11;
             default -> 0.0;
         };
-        return calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo;
     }
     
     double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(
@@ -108,20 +106,16 @@ public class CorrecaoCTC {
             int fontedePotassioUsar,
             double valorDaFontePorTonelada,
             double QTDKgHectareDeFonteDePotassio){
-        double custoPorHectareDeFonteDePotassio = 0.0;
         switch(fontedePotassioUsar){
-            case 1 -> custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
-            case 2 -> custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
-            case 3 -> custoPorHectareDeFonteDePotassio = valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;
+            case 1,2,3 -> {return valorDaFontePorTonelada*QTDKgHectareDeFonteDePotassio/1000;}
             case 4 -> {
                 switch(texturaSolo){
-                    case 1 -> custoPorHectareDeFonteDePotassio = 0.7*QTDKgHectareDeFonteDePotassio/1000;
-                    case 2 -> custoPorHectareDeFonteDePotassio = 0.5*QTDKgHectareDeFonteDePotassio/1000;    
+                    case 1 -> {return 0.7*QTDKgHectareDeFonteDePotassio/1000;}
+                    case 2 -> {return 0.5*QTDKgHectareDeFonteDePotassio/1000;}
                 }
             }
-            default -> custoPorHectareDeFonteDePotassio = 0.0;
         }
-    return custoPorHectareDeFonteDePotassio;
+        return 0.0;
     }
 
     String descricaoTipoDeCorrecaoDePotassio(int tipoDefonteDePotassio) {
