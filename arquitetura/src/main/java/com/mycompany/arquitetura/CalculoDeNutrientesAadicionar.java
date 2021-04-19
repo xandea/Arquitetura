@@ -7,19 +7,18 @@ public class CalculoDeNutrientesAadicionar {
             double fosforo,//B11
             int fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){//D25
+        if(fonteDeFostoroUtilizar>12 || fonteDeFostoroUtilizar<=0) return 0.0;
         double teordeP2O5 = switch(fonteDeFostoroUtilizar){
-            case 1-> 18.0;
+            case 1,5,12-> 18.0;
             case 2-> 41.0;
             case 3-> 48.0;
             case 4-> 45.0;
-            case 5-> 18.0;
             case 6-> 33.0;
             case 7-> 29.0;
             case 8-> 32.0;
             case 9-> 24.0;
             case 10-> 18.5;
             case 11-> 52.0;
-            case 12-> 18.0;
             default-> 0.0;
         };
         return 100/teordeP2O5*((teorFosforoAtingir-fosforo)*4.58/eficienciaDoFosforo);
