@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="0" name="com.mycompany.arquitetura.SoloTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="19" failures="0" name="com.mycompany.arquitetura.SoloTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -60,22 +60,22 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNomeDoSegundoNutrienteParaCorrecaoDePotassio" time="0.009"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculaCustoPorHectareDeFonteDePotassio" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaMemoriacalculaQTDKgHectareDaFonteDeFosforo" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoDoPnaCTCposCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaMemoriacalculaQTDKgHectareDaFonteDeFosforo" time="0.002"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNomeDoPrimeiroNutrienteParaCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNomeDoSegundoNutrienteParaCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoDoPnaCTCposCorrecao" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculaQTDKgHectareDeFonteDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculaCustoPorHectareDeFonteDePotassio" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeDescricaoTipodeCorrecaoDePotassio" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCustoCorrecaoPporHa" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoIdealdoPnaCTC" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoAtualdoPnaCTC" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0.001"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeQuantidadeAaplicar" time="0"/>
-  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNecessidadeDePotassioAdicionarCalculoDeNutrientesAadicionar" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeNecessidadeDePotassioAdicionarCalculoDeNutrientesAadicionar" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeQuantidadeAaplicar" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoPrimeiroTipodeCorrecao" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCalculoSegundoTipodeCorrecao" time="0.001"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoAtualdoPnaCTC" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeParticipacaoIdealdoPnaCTC" time="0"/>
+  <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testeCustoCorrecaoPporHa" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaCTCCmol" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaVPorcentagem" time="0"/>
   <testcase classname="com.mycompany.arquitetura.SoloTest" name="com.mycompany.arquitetura.SoloTest.testaSCMOL" time="0"/>

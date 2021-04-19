@@ -129,7 +129,7 @@ public class SoloTest {
     public void testeCustoCorrecaoPporHa(){
         CorrecaoCTC c = new CorrecaoCTC();
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-        assertEquals(24.79015873015873,c.custoCorrecaoPporHa(m.calculaKgAlqueiroDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1, 200)); 
+        assertEquals(24.790158730158733,c.custoCorrecaoPporHa(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1, 200)); 
     }
     @Test
     public void testeQuantidadeAaplicar(){

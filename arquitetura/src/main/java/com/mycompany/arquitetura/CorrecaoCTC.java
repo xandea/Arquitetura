@@ -76,14 +76,9 @@ public class CorrecaoCTC {
         }
     }
     
-    double custoCorrecaoPporHa(double calculaKgAlqueiroDaFonteDeFosforo,int fonteDeFostoroUtilizar, double precoDaFonte){
-        double custoCorrecaoPporHa = 0.0;
-        if(fonteDeFostoroUtilizar>0 && fonteDeFostoroUtilizar<13){
-            custoCorrecaoPporHa = calculaKgAlqueiroDaFonteDeFosforo/1000*precoDaFonte/2.42;
-        }else{
-            custoCorrecaoPporHa = 0.0;
-        }
-        return custoCorrecaoPporHa;
+    double custoCorrecaoPporHa(double calculaQTDKgHectareDaFonteDeFosforo,int fonteDeFostoroUtilizar, double precoDaFonte){
+        if(fonteDeFostoroUtilizar<=0 || fonteDeFostoroUtilizar>=13) return 0.0;
+            return calculaQTDKgHectareDaFonteDeFosforo/1000*precoDaFonte;
     }
     
     double participacaoAtualdoPnaCTC(double calculaCTCMOL,double potassio){
