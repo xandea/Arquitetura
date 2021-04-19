@@ -155,7 +155,7 @@ public class SoloTest {
     public void testeCalculaQTDKgHectareDeFonteDePotassio(){
        CorrecaoCTC c = new CorrecaoCTC();
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();   
-       double necessidadeDePotassioAdicionar = 0.0;
+       double necessidadeDePotassioAdicionar;
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
        assertEquals(450.5462068965517,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1)); 
     }
@@ -163,7 +163,7 @@ public class SoloTest {
     public void testeCalculaCustoPorHectareDeFonteDePotassio(){
         CorrecaoCTC c = new CorrecaoCTC();
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();   
-       double necessidadeDePotassioAdicionar = 0.0;
+       double necessidadeDePotassioAdicionar;
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
        assertEquals(225.27310344827586,c.calculaCustoPorHectareDeFonteDePotassio(1, 1,500.0, c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1))); 
     }
@@ -176,7 +176,7 @@ public class SoloTest {
     public void testeCalculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(){
         CorrecaoCTC c = new CorrecaoCTC();
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar(); 
-        double necessidadeDePotassioAdicionar = 0.0;
+        double necessidadeDePotassioAdicionar;
         necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
         assertEquals(85.43049230769232,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(2,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,2))); 
     }
@@ -184,7 +184,7 @@ public class SoloTest {
     public void testeCalculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(){
         CorrecaoCTC c = new CorrecaoCTC();
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar(); 
-        double necessidadeDePotassioAdicionar = 0.0;
+        double necessidadeDePotassioAdicionar;
         necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
         assertEquals(213.80465454545453,c.calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(3,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,3))); 
     }
