@@ -110,24 +110,15 @@ public class CorrecaoCTC {
             double necessidadeDePotassioAdicionar,//F51
             int fontedePotassioUsar //D37
             ){
-        double QTDKgHectareDeFonteDePotassio = 0.0;
-        double teorDaFonteDePotassio=0.0;//em %
-        
-        if(necessidadeDePotassioAdicionar>0.01){
-            teorDaFonteDePotassio = switch (fontedePotassioUsar) {
-                case 1 -> 58.0;
-                case 2 -> 52.0;
-                case 3 -> 22.0;
-                case 4 -> 44.0;
-                default -> 0.0;
+        if(necessidadeDePotassioAdicionar<0.01 || fontedePotassioUsar==0) return 0.0;
+        double teorDaFonteDePotassio = switch (fontedePotassioUsar) {//em %
+            case 1 -> 58.0;
+            case 2 -> 52.0;
+            case 3 -> 22.0;
+            case 4 -> 44.0;
+            default -> 0.0;
             }; 
-        QTDKgHectareDeFonteDePotassio = necessidadeDePotassioAdicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDaFonteDePotassio;
-            
-        return QTDKgHectareDeFonteDePotassio;   
-        
-        }else{
-            return 0.0;
-        }  
+        return necessidadeDePotassioAdicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDaFonteDePotassio; 
     }
     
     double calculaCustoPorHectareDeFonteDePotassio(
