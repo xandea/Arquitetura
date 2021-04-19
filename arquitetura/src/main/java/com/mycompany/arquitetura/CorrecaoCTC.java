@@ -120,7 +120,6 @@ public class CorrecaoCTC {
 
     String descricaoTipoDeCorrecaoDePotassio(int tipoDefonteDePotassio) {
         return switch(tipoDefonteDePotassio){
-            case 1 -> "";
             case 2 -> "Essa correção de Potássio fornecerá também:";
             case 3 -> "Essa correção de Potássio fornecerá também:";
             default -> "";   
@@ -132,7 +131,6 @@ public class CorrecaoCTC {
             double QTDKgHectareDeFonteDePotassio
             ){
         return switch(tipoDefonteDePotassio){
-            case 1 -> 0.0;
             case 2 -> QTDKgHectareDeFonteDePotassio*0.17;
             case 3 -> QTDKgHectareDeFonteDePotassio*0.22;
             default -> 0.0;
@@ -144,7 +142,6 @@ public class CorrecaoCTC {
             double QTDKgHectareDeFonteDePotassio
             ){
         return switch(tipoDefonteDePotassio){
-            case 1,2 -> 0.0;
             case 3 -> QTDKgHectareDeFonteDePotassio*0.18;
             default -> 0.0;
         };
