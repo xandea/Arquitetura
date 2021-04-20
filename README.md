@@ -5,7 +5,7 @@
 <p>A modelagem dos valores ideais seguem conforme apresentado na planilha excel de correção de solos.</p>
 <p>Como é muito extenso o mapeamento em imagens, foi utilizado o <a href="https://miro.com/app/board/o9J_lRwHN5c=/">Miro</a> 
 <p>Um exemplo:</p>
-![Flowchart](https://user-images.githubusercontent.com/32207196/110216390-c07f7880-7e8d-11eb-9c51-136dc1d5591c.jpg)
+<img src="https://user-images.githubusercontent.com/32207196/110216390-c07f7880-7e8d-11eb-9c51-136dc1d5591c.jpg"/>
 
 <h1 align="center">Melhorias no Código</h1>
 
@@ -15,10 +15,10 @@
 
 <p>O cloc foi aplicado às classes principais "CalculoDeNutrientesAadicionar.java" e "CorrecaoCTC.java"</p>
 <p>Para "CalculoDeNutrientesAadicionar.java":</p>
-![clocCalculoDeNutrientesAadicionar](https://user-images.githubusercontent.com/32207196/115470629-0198d580-a20d-11eb-9f59-13cc6492b15f.PNG)
+<img src="https://user-images.githubusercontent.com/32207196/115470629-0198d580-a20d-11eb-9f59-13cc6492b15f.PNG"/>
 
 <p>Para "CorrecaoCTC.java":</p>
-![clocCorrecaoCTC](https://user-images.githubusercontent.com/32207196/115470747-2ab96600-a20d-11eb-8ebd-8c7e8808213a.PNG)
+<img src="https://user-images.githubusercontent.com/32207196/115470747-2ab96600-a20d-11eb-8ebd-8c7e8808213a.PNG"/>
 
 <h2>Problemas Identificados</h2>
 <ul>
@@ -48,10 +48,10 @@
 <h2>Impactos das melhorias</h2>
 
 <p>Para "CalculoDeNutrientesAadicionar.java":</p>
-![clocCalculoDeNutrientesAadicionarApós](https://user-images.githubusercontent.com/32207196/115473301-df558680-a211-11eb-91a7-c42b60289066.PNG)
+<img src="https://user-images.githubusercontent.com/32207196/115473301-df558680-a211-11eb-91a7-c42b60289066.PNG"/>
 
 <p>Para "CorrecaoCTC.java":</p>
-![clocCorrecaoCTCapós](https://user-images.githubusercontent.com/32207196/115473247-c4831200-a211-11eb-954c-34cc95197009.PNG)
+<img src="https://user-images.githubusercontent.com/32207196/115473247-c4831200-a211-11eb-954c-34cc95197009.PNG"/>
 
 <p>Feito todas as mudanças, podemos notar uma diminuição de quase 50% na linha de código. Mostrando-se efetiva as modificações feitas</p>
 
