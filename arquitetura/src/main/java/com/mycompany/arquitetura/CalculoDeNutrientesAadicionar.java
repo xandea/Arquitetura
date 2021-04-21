@@ -5,29 +5,29 @@ public class CalculoDeNutrientesAadicionar {
     double calculaQTDKgHectareDaFonteDeFosforo(//B22 da memoria de calculo
             double teorFosforoAtingir,//D22
             double fosforo,//B11
-            int fonteDeFostoroUtilizar,//D23
+            FontesDeFosforo fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){//D25
-        if(fonteDeFostoroUtilizar>12 || fonteDeFostoroUtilizar<=0) return 0.0;
         double teordeP2O5 = switch(fonteDeFostoroUtilizar){
-            case 1,5,12-> 18.0;
-            case 2-> 41.0;
-            case 3-> 48.0;
-            case 4-> 45.0;
-            case 6-> 33.0;
-            case 7-> 29.0;
-            case 8-> 32.0;
-            case 9-> 24.0;
-            case 10-> 18.5;
-            case 11-> 52.0;
+            case SUPERFOSFATOSIMPLES,TERMOFOSFATOYOORIN,MULTIFOSFATOMAGNESIANO-> 18.0;
+            case SUPERFOSFATOTRIPLO-> 41.0;
+            case MAP-> 48.0;
+            case DAP-> 45.0;
+            case FOSFATOREATARAD-> 33.0;
+            case FOSFATOREATIVODEGAFSA-> 29.0;
+            case FOSFATOREATIVODAOUI-> 32.0;
+            case FOSFATONATPATOSDEMINAS-> 24.0;
+            case ESCORIADETHOMAS-> 18.5;
+            case ACIDOFOSFORICO-> 52.0;
             default-> 0.0;
         };
+        if(teordeP2O5==0.0) return 0.0;
         return 100/teordeP2O5*((teorFosforoAtingir-fosforo)*4.58/eficienciaDoFosforo);
     }
     
     double calculaKgAlqueiroDaFonteDeFosforo(//B24
             double teorFosforoAtingir,//D22
             double fosforo,//B11
-            int fonteDeFostoroUtilizar,//D23
+            FontesDeFosforo fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){
         return calculaQTDKgHectareDaFonteDeFosforo(
             teorFosforoAtingir,//D22

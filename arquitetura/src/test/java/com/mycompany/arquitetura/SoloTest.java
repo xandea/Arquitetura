@@ -92,7 +92,7 @@ public class SoloTest {
     @Test
     public void testaMemoriacalculaQTDKgHectareDaFonteDeFosforo(){
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7));
+       assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7));
     }
 
     @Test
@@ -106,35 +106,35 @@ public class SoloTest {
     public void testeCalculoPrimeiroTipodeCorrecao(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(12.395079365079367,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7),1));        
+        assertEquals(12.395079365079367,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7),FontesDeFosforo.SUPERFOSFATOSIMPLES));        
     }
     
     @Test
     public void testeCalculoSegundoTipodeCorrecao(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals(34.70622222222223,c.calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1));        
+        assertEquals(34.70622222222223,c.calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7), FontesDeFosforo.SUPERFOSFATOSIMPLES));        
     }
     @Test
-    public void testeNomeDoPrimeiroNutrienteParaCorrecaoDePotassio(){
+    public void testeNomeDoPrimeiroNutrienteParaCorrecaoDeFosforo(){
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals("Magnésio",c.nomeDoPrimeiroNutrienteParaCorrecaoDePotassio(2));        
+        assertEquals("Magnésio",c.nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo(FontesDeFosforo.SUPERFOSFATOTRIPLO));        
     }
     @Test
-    public void testeNomeDoSegundoNutrienteParaCorrecaoDePotassio(){
+    public void testeNomeDoSegundoNutrienteParaCorrecaoDeFosforo(){
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals("Nitrogênio",c.nomeDoSegundoNutrienteParaCorrecaoDePotassio(3));        
+        assertEquals("Nitrogênio",c.nomeDoSegundoNutrienteParaCorrecaoDeFosforo(FontesDeFosforo.MAP));        
     }
     @Test
     public void testeCustoCorrecaoPporHa(){
         CorrecaoCTC c = new CorrecaoCTC();
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-        assertEquals(24.790158730158733,c.custoCorrecaoPporHa(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7), 1, 200)); 
+        assertEquals(24.790158730158733,c.custoCorrecaoPporHa(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7), FontesDeFosforo.SUPERFOSFATOSIMPLES, 200)); 
     }
     @Test
     public void testeQuantidadeAaplicar(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
-        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES.getValor(),0.7)); 
+        assertEquals(123.95079365079366,m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7)); 
     }
     @Test
     public void testeParticipacaoAtualdoPnaCTC(){
@@ -157,7 +157,7 @@ public class SoloTest {
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();   
        double necessidadeDePotassioAdicionar;
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
-       assertEquals(450.5462068965517,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1)); 
+       assertEquals(450.5462068965517,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,FontesDePotassio.CLORETODEPOTASSIO)); 
     }
     @Test
     public void testeCalculaCustoPorHectareDeFonteDePotassio(){
@@ -165,12 +165,12 @@ public class SoloTest {
        CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();   
        double necessidadeDePotassioAdicionar;
        necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
-       assertEquals(225.27310344827586,c.calculaCustoPorHectareDeFonteDePotassio(1, 1,500.0, c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,1))); 
+       assertEquals(225.27310344827586,c.calculaCustoPorHectareDeFonteDePotassio(1,FontesDePotassio.CLORETODEPOTASSIO,500.0, c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,FontesDePotassio.CLORETODEPOTASSIO))); 
     }
     @Test
     public void testeDescricaoTipodeCorrecaoDePotassio(){
         CorrecaoCTC c = new CorrecaoCTC();
-        assertEquals("Essa correção de Potássio fornecerá também:",c.descricaoTipoDeCorrecaoDePotassio(2)); 
+        assertEquals("Essa correção de Potássio fornecerá também:",c.descricaoTipoDeCorrecaoDePotassio(FontesDePotassio.SULFATODEPOTASSIO)); 
     }
     @Test
     public void testeCalculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(){
@@ -178,7 +178,7 @@ public class SoloTest {
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar(); 
         double necessidadeDePotassioAdicionar;
         necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
-        assertEquals(85.43049230769232,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(2,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,2))); 
+        assertEquals(85.43049230769232,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(FontesDePotassio.SULFATODEPOTASSIO,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,FontesDePotassio.SULFATODEPOTASSIO))); 
     }
     @Test
     public void testeCalculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(){
@@ -186,7 +186,7 @@ public class SoloTest {
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar(); 
         double necessidadeDePotassioAdicionar;
         necessidadeDePotassioAdicionar = m.necessidadeDePotassioAdicionar(3.0,c.participacaoAtualdoPnaCTC(c.calculaCTCMOL(c.calculaSCMOL(0.15,5.76,1.63), 5.35), 0.15), 0.15);
-        assertEquals(213.80465454545453,c.calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(3,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,3))); 
+        assertEquals(213.80465454545453,c.calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(FontesDePotassio.SULTAFATODEPOTASSIOEMAGNESIO,c.calculaQTDKgHectareDeFonteDePotassio(85,necessidadeDePotassioAdicionar,FontesDePotassio.SULTAFATODEPOTASSIOEMAGNESIO))); 
     }
     
 }
