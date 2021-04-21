@@ -29,7 +29,7 @@
 <h2>Soluções</h2>
 <ul>
   <li>Encontrado o padrão da linguagem para expressão <a href="https://docs.oracle.com/en/java/javase/15/language/switch-expressions.html">switch</a> e utilização para atribuição de valores repetidos para um mesmo retorno</li>
-  <li>Uma proposta encontrada em um <a href="https://docs.oracle.com/en/java/javase/15/language/switch-expressions.html">vídeo</a>, trazia a ideia de subtratir os "elses" com retornos seguidos, ajudando na manutenabilidade e na quantidade de código</li>
+  <li>Uma proposta encontrada em um <a href="https://www.youtube.com/watch?v=EumXak7TyQ0&t=2s">vídeo</a>, trazia a ideia de subtratir os "elses" com retornos seguidos, ajudando na manutenabilidade e na quantidade de código</li>
 </ul>
 
 <h2>Implementação das soluções</h2>
