@@ -105,6 +105,7 @@ public class SoloTest {
     @Test
     public void testeCalculoPrimeiroTipodeCorrecao(){
         CalculoDeNutrientesAadicionar m = new CalculoDeNutrientesAadicionar();
+ 
         CorrecaoCTC c = new CorrecaoCTC();
         assertEquals(12.395079365079367,c.calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo(m.calculaQTDKgHectareDaFonteDeFosforo(12.0,8.59,FontesDeFosforo.SUPERFOSFATOSIMPLES,0.7),FontesDeFosforo.SUPERFOSFATOSIMPLES));        
     }

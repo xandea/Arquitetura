@@ -7,19 +7,7 @@ public class CalculoDeNutrientesAadicionar {
             double fosforo,//B11
             FontesDeFosforo fonteDeFostoroUtilizar,//D23
             double eficienciaDoFosforo){//D25
-        double teordeP2O5 = switch(fonteDeFostoroUtilizar){
-            case SUPERFOSFATOSIMPLES,TERMOFOSFATOYOORIN,MULTIFOSFATOMAGNESIANO-> 18.0;
-            case SUPERFOSFATOTRIPLO-> 41.0;
-            case MAP-> 48.0;
-            case DAP-> 45.0;
-            case FOSFATOREATARAD-> 33.0;
-            case FOSFATOREATIVODEGAFSA-> 29.0;
-            case FOSFATOREATIVODAOUI-> 32.0;
-            case FOSFATONATPATOSDEMINAS-> 24.0;
-            case ESCORIADETHOMAS-> 18.5;
-            case ACIDOFOSFORICO-> 52.0;
-            default-> 0.0;
-        };
+        double teordeP2O5 = fonteDeFostoroUtilizar.calculaTeordeP2O5();
         if(teordeP2O5==0.0) return 0.0;
         return 100/teordeP2O5*((teorFosforoAtingir-fosforo)*4.58/eficienciaDoFosforo);
     }

@@ -21,30 +21,14 @@ public class CorrecaoCTC {
     double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDeFosforo (
             double calculaQTDKgHectareDaFonte,//B22
             FontesDeFosforo fonteDeFostoroUtilizar){ //D23
-        return switch (fonteDeFostoroUtilizar) {
-            case SUPERFOSFATOSIMPLES -> calculaQTDKgHectareDaFonte*0.1;
-            case TERMOFOSFATOYOORIN -> calculaQTDKgHectareDaFonte*0.15;
-            case MULTIFOSFATOMAGNESIANO -> calculaQTDKgHectareDaFonte*0.11;
-            default -> 0.0;
-        };
+        return fonteDeFostoroUtilizar.quantidadeDoPrimeiroNutrienteParaCorrecaoDeFosforo()*calculaQTDKgHectareDaFonte;
     }
     
     double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDeFosforo(
             double calculaQTDKgHectareDaFonteDeFosforo,//B24
             FontesDeFosforo fonteDeFostoroUtilizar//D23
             ){
-        double quantidadeDeNutriente = switch (fonteDeFostoroUtilizar) {
-            case SUPERFOSFATOSIMPLES,TERMOFOSFATOYOORIN,FOSFATONATPATOSDEMINAS -> 0.28;
-            case SUPERFOSFATOTRIPLO -> 0.2;
-            case MAP -> 0.09;
-            case DAP -> 0.16;
-            case FOSFATOREATARAD,FOSFATOREATIVODEGAFSA -> 0.52;
-            case FOSFATOREATIVODAOUI -> 0.45;
-            case ESCORIADETHOMAS -> 0.44;
-            case MULTIFOSFATOMAGNESIANO -> 0.18;
-            default -> 0.0;
-        };
-        return quantidadeDeNutriente*calculaQTDKgHectareDaFonteDeFosforo;
+        return fonteDeFostoroUtilizar.quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo()*calculaQTDKgHectareDaFonteDeFosforo;
     }
     
     String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo(FontesDeFosforo fonteDeFostoroUtilizar){
