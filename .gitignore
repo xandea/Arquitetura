@@ -1,4 +1,2 @@
-/arquitetura/nbproject/
-
-# Compiled class file
-*.class
+/arquitetura/nbproject/ 
+/arquitetura/target/
