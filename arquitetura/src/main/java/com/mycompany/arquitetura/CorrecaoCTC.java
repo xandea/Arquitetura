@@ -32,27 +32,11 @@ public class CorrecaoCTC {
     }
     
     String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo(FontesDeFosforo fonteDeFostoroUtilizar){
-        return switch (fonteDeFostoroUtilizar) {
-            case SUPERFOSFATOSIMPLES, MULTIFOSFATOMAGNESIANO -> "Enxofre";
-            case SUPERFOSFATOTRIPLO -> "Magnésio";
-            default -> "";
-        };
+        return fonteDeFostoroUtilizar.nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo();
     } 
 
     String nomeDoSegundoNutrienteParaCorrecaoDeFosforo(FontesDeFosforo fonteDeFostoroUtilizar) {
-        return switch(fonteDeFostoroUtilizar){
-            case SUPERFOSFATOSIMPLES,
-                SUPERFOSFATOTRIPLO,
-                TERMOFOSFATOYOORIN,
-                FOSFATOREATARAD,
-                FOSFATOREATIVODEGAFSA,
-                FOSFATOREATIVODAOUI,
-                FOSFATONATPATOSDEMINAS,
-                ESCORIADETHOMAS,
-                MULTIFOSFATOMAGNESIANO -> "Cálcio";
-            case MAP,DAP -> "Nitrogênio";
-            default -> "";
-        };
+        return fonteDeFostoroUtilizar.nomeDoSegundoNutrienteParaCorrecaoDeFosforo();
     }
     
     double custoCorrecaoPporHa(double calculaQTDKgHectareDaFonteDeFosforo,FontesDeFosforo fonteDeFostoroUtilizar, double precoDaFonte){
@@ -82,13 +66,7 @@ public class CorrecaoCTC {
             FontesDePotassio fontedePotassioUsar //D37
             ){
         if(necessidadeDePotassioAdicionar<0.01 || fontedePotassioUsar==null) return 0.0;
-        double teorDaFonteDePotassio = switch (fontedePotassioUsar) {//em %
-            case CLORETODEPOTASSIO -> 58.0;
-            case SULFATODEPOTASSIO -> 52.0;
-            case SULTAFATODEPOTASSIOEMAGNESIO -> 22.0;
-            case NITRATODEPOTASSIO -> 44.0;
-            default -> 0.0;
-            }; 
+        double teorDaFonteDePotassio = fontedePotassioUsar.teorDaFonteDePotassio();
         return necessidadeDePotassioAdicionar*39.1*10*2*1.2*100/eficienciaDoPotassio*100/teorDaFonteDePotassio; 
     }
     
@@ -110,32 +88,22 @@ public class CorrecaoCTC {
     }
 
     String descricaoTipoDeCorrecaoDePotassio(FontesDePotassio tipoDefonteDePotassio) {
-        return switch(tipoDefonteDePotassio){
-            case SULFATODEPOTASSIO -> "Essa correção de Potássio fornecerá também:";
-            case SULTAFATODEPOTASSIOEMAGNESIO -> "Essa correção de Potássio fornecerá também:";
-            default -> "";   
-        };
+        return tipoDefonteDePotassio.descricaoTipoDeCorrecaoDePotassio();
+        
     }
     
     double calculoFornecimentoDoPrimeiroNutrienteParaCorrecaoDePotassio(
             FontesDePotassio tipoDefonteDePotassio,//D37
             double QTDKgHectareDeFonteDePotassio
             ){
-        return switch(tipoDefonteDePotassio){
-            case SULFATODEPOTASSIO -> QTDKgHectareDeFonteDePotassio*0.17;
-            case SULTAFATODEPOTASSIOEMAGNESIO -> QTDKgHectareDeFonteDePotassio*0.22;
-            default -> 0.0;
-        };   
+        return QTDKgHectareDeFonteDePotassio*tipoDefonteDePotassio.quantidadeDoPrimeiroNutrienteParaCorrecaoDePotassio();
     }
     
     double calculoFornecimentoDoSegundoNutrienteParaCorrecaoDePotassio(
             FontesDePotassio tipoDefonteDePotassio,//D37
             double QTDKgHectareDeFonteDePotassio
             ){
-        return switch(tipoDefonteDePotassio){
-            case SULTAFATODEPOTASSIOEMAGNESIO -> QTDKgHectareDeFonteDePotassio*0.18;
-            default -> 0.0;
-        };
+        return QTDKgHectareDeFonteDePotassio*tipoDefonteDePotassio.quantidadeDoSegundoNutrienteParaCorrecaoDePotassio();
     }
     
 }

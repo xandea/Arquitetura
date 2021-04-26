@@ -1,6 +1,6 @@
 package com.mycompany.arquitetura;
 
-public enum FontesDeFosforo implements Regras{
+public enum FontesDeFosforo implements RegrasFosforo{
     SUPERFOSFATOSIMPLES{
         @Override
         public double calculaTeordeP2O5() {
@@ -15,6 +15,16 @@ public enum FontesDeFosforo implements Regras{
         @Override
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.28;
+        }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "Enxofre";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
         }
     },//1
     SUPERFOSFATOTRIPLO {
@@ -32,6 +42,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.2;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "Magnésio";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
+        }
     }, //2
     MAP {
         @Override
@@ -48,6 +68,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.09;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Nitrogênio";
+        }
     }, //3
     DAP {
         @Override
@@ -63,6 +93,16 @@ public enum FontesDeFosforo implements Regras{
         @Override
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.16;
+        }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Nitrogênio";
         }
     }, //4
     TERMOFOSFATOYOORIN {
@@ -84,6 +124,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.28;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
+        }
         
     }, //5
     FOSFATOREATARAD {
@@ -101,6 +151,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.52;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
+        }
     }, //6
     FOSFATOREATIVODEGAFSA {
         @Override
@@ -116,6 +176,16 @@ public enum FontesDeFosforo implements Regras{
         @Override
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.52;
+        }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
         }
     },//7
     FOSFATOREATIVODAOUI {
@@ -133,6 +203,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.45;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
+        }
     },//8
     FOSFATONATPATOSDEMINAS {
         @Override
@@ -148,6 +228,16 @@ public enum FontesDeFosforo implements Regras{
         @Override
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.28;
+        }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
         }
     },//9
     ESCORIADETHOMAS {
@@ -165,6 +255,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.44;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
+        }
     },//10
     ACIDOFOSFORICO {
         @Override
@@ -181,6 +281,16 @@ public enum FontesDeFosforo implements Regras{
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.0;
         }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "";
+        }
     },//11
     MULTIFOSFATOMAGNESIANO {
         @Override
@@ -195,6 +305,16 @@ public enum FontesDeFosforo implements Regras{
         @Override
         public double quantidadeDoSegundoNutrienteParaCorrecaoDeFosforo() {
             return 0.18;
+        }
+
+        @Override
+        public String nomeDoPrimeiroNutrienteParaCorrecaoDeFosforo() {
+            return "Enxofre";
+        }
+
+        @Override
+        public String nomeDoSegundoNutrienteParaCorrecaoDeFosforo() {
+            return "Cálcio";
         }
         
     };//12
